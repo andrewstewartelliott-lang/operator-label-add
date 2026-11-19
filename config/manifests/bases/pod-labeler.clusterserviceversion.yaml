@@ -1,0 +1,45 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: pod-labeler.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions: {}
+  description: Watches for newly-created Pods and adds the label app.aelliott.io/label=true
+    to any Pod that does not already have that label key.
+  displayName: Pod Labeler
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - pods
+  - labels
+  links:
+  - name: Pod Labeler
+    url: https://aelliott.io
+  maintainers:
+  - email: maintainer@example.com
+    name: maintainer
+  maturity: alpha
+  minKubeVersion: 1.25.0
+  provider:
+    name: aelliott.io
+    url: https://aelliott.io
+  version: 0.0.0
